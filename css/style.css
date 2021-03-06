@@ -79,6 +79,7 @@ body{
     height: 30px;
     padding: 15px;
     text-align: center;
+    cursor: pointer;
 }
 .burger_list__item:hover{
     color: blue;
