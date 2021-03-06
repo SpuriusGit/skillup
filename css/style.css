@@ -19,8 +19,10 @@ body{
 /* header  */
 .header{
     display: flex;
+    position: fixed;
     height: 80px;
     width: 100%;
+    background-color: #fff;
 }
 .container{
     display: flex;
@@ -62,6 +64,24 @@ body{
     border: 2px solid white;
     margin: 8px auto;
     border-radius: 5px;
+}
+.burger_list{
+    display: none;
+    width: 200px;
+    list-style: none;
+    position: absolute;
+    top:80px;
+    right: 0;
+    background-color: #fff;
+    padding: 20px 0;
+}
+.burger_list__item{
+    height: 30px;
+    padding: 15px;
+    text-align: center;
+}
+.burger_list__item:hover{
+    color: blue;
 }
 .header_nav__item{
     margin: 0 10px;
@@ -279,5 +299,3 @@ body{
         width: 40%;
     }
  }
-
-@media (min-width: 1200px) { }
