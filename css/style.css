@@ -1,106 +1,133 @@
 /* imports */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@500;700;900&display=swap');
+
+/* all */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+}
 /* header  */
 .header{
+    display: flex;
     height: 80px;
     width: 100%;
+}
+.container{
     display: flex;
-    font-family: 'Roboto', sans-serif;
-    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
 }
-.logo{
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 65px;
-    letter-spacing: 0.03em;
-    cursor: pointer;
+.header .container{
+    justify-content: space-between;
 }
-.logo span{
-    color: #2196F3;
-}
-.header__nav{
+.header_nav,.header_links{
+    display: flex;
     list-style: none;
-    display: flex;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 65px;
-    letter-spacing: 0.02em;
-    color: #212121;
+    justify-content: space-between;
+    line-height: 80px;
 }
-.header__nav__item{
-    margin:0 30px;
-    cursor: pointer;
-}
-.header__link,.header__contact{
-    text-decoration: none;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 65px;
-    letter-spacing: 0.02em;
-    color: #757575;
-    cursor: pointer;
-    margin: 0 30px;
-}
-.header__nav__item:hover,.header__link:hover,.header__contact:hover{
+.header_nav{width: 40%;}
+.header_links{width: 35%;}
+.logo{
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
     color: #2196F3;
 }
-/* intro */
+.logo span{color: black;}
+.burger{
+    display: none;
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border:none;
+    background-color: teal;
+    flex-direction: column;
+    cursor: pointer;
+}
+.burger span{
+    height: 2px;
+    width: 45px;
+    background-color: #fff;
+    border: 2px solid white;
+    margin: 8px auto;
+    border-radius: 5px;
+}
+.header_nav__item{
+    margin: 0 10px;
+}
+/* header animation */
+.header_nav__item:hover,.header__link:hover{
+    color: #2196F3;
+    transition: 200ms;
+    cursor: pointer;
+}
+ /* intro  */
 .intro{
     display: flex;
     height: 600px;
+    width: 100%;
     background-color: #2F303A;
-    flex-direction: column;
-    justify-content: center;
 }
 .intro h1{
     display: flex;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 900;
+    margin: 200px auto 30px;
     font-size: 44px;
-    text-align: center;
+    font-weight: 900;
+    color: white;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin: 0 auto;
+    line-height: 60px;
+    text-align: center;
+}
+.intro .container{
+    flex-direction: column;
 }
 .intro button{
-    width: 200px;
     height: 50px;
-    background: #2196F3;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
-    color: #FFFFFF;
-    margin: 40px auto 0;
+    line-height: 30px;
+    color: #fff;
     cursor: pointer;
 }
 /* about us  */
-.about_us__blocks{
+.about_us{
     display: flex;
-    justify-content: center;
-    margin: 70px;
+    width: 100%;
 }
-.about_us__block{
+.about_us .container{
+    flex-direction: column;
+    justify-content: center;
+}
+.about_us__description{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.about_us__description_block{
     display: flex;
     flex-direction: column;
-    margin: 60px 20px;
+    width: 20%;
+    margin: 70px auto;
 }
-.about_us__block h6{
+.about_us__description_block h6{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -109,123 +136,147 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #212121;
-    margin-bottom: 20px;
 }
-.about_us__block p{
+.about_us__description_block p{
+    margin-top: 20px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     /* or 171% */
-
     letter-spacing: 0.03em;
-
     color: #757575;
 }
-.about_us h1{
+.about_us h2{
+    display: flex;
+    margin: auto;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 42px;
-    text-align: center;
     letter-spacing: 0.03em;
-
     color: #212121;
 }
 .about_us__imgs{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 30px auto;
 }
 .about_us__img{
-    margin:60px 20px;
+    width: 30%;
 }
-/* team  */
-.team{
-    background: #F5F4FA;
-    height: 640px;
+.about_us__img img{
+    height: auto;
+    width: 100%;
 }
-.team h2{
+/* our team  */
+.our_team{
+    display: flex;
+    width: 100%;
+    background-color: #F5F4FA;
+}
+.our_team .container{
+    flex-direction: column;
+}
+.our_team h2{
+    display: flex;
+    margin:30px auto;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
-    line-height: 242px;
-    text-align: center;
+    line-height: 42px;
     letter-spacing: 0.03em;
     color: #212121;
 }
 .teammates{
     display: flex;
     justify-content: space-around;
+    margin: 10px auto 50px;
 }
 .teammate{
-    background: #FFFFFF;
-    /* material shadow v1 */
-
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: #fff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 .teammate img{
-    width: 270px;
-    height: 260px;
+    height: auto;
+    width: 100%;
 }
 .teammate p{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    /* identical to box height */
-
     text-align: center;
-    letter-spacing: 0.03em;
-
-    color: #212121;
     margin: 20px auto 10px;
 }
 .teammate span{
-    display: block;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    /* identical to box height */
-
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: #757575;
-    margin: 10px auto 30px;
+    margin:0 auto 20px;
 }
-/* footer */
+/* footer  */
 .footer{
-    background: #2F303A;
-    height: 252px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #2F303A;
 }
 .footer_list{
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin: 100px;
+    margin-top: 50px;
+    margin-bottom: 40px;
 }
-.footer_list__item .logo{
-    color: white;
+.footer_list__item:nth-child(1){
+    margin-bottom: 20px;
 }
 .footer_list__item{
+    margin: 5px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    /* or 171% */
-
     letter-spacing: 0.03em;
-
     color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
 }
-.footer_list__item:nth-child(2){
-    color: white;
+.footer_list__item:hover{
+    color: #fff;
 }
+
+/* ADAPTIVE */
+@media (max-width: 575.98px) {
+    .header_nav__item,.header_links{display: none;}
+    .header_nav__item:nth-child(1){display: block;}
+    .burger{display: flex;}
+    .about_us__description,.about_us__imgs,.teammates{flex-direction: column;}
+    .about_us__description_block,.about_us__img,.teammate{width: 100%;text-align: center;}
+ }
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .header_nav__item,.header_links{display: none;}
+    .header_nav__item:nth-child(1){display: block;}
+    .burger{display: flex;}
+    .about_us__description,.about_us__imgs,.teammates{flex-direction: column;}
+    .about_us__description_block,.about_us__img,.teammate{width: 100%;text-align: center;}
+
+ }
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .header_nav__item,.header_links{display: none;}
+    .header_nav__item:nth-child(1){display: block;}
+    .burger{display: flex;}
+    .about_us__description,.about_us__imgs,.teammates{flex-direction: column;}
+    .about_us__description_block,.about_us__img,.teammate{width: 100%;text-align: center;}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .header_nav{
+        width: 40%;
+    }
+    .header_links{
+        width: 40%;
+    }
+ }
+
+@media (min-width: 1200px) { }
