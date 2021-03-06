@@ -15,6 +15,11 @@ body{
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
+    background-image: url(../img/268363.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 /* header  */
 .header{
@@ -98,7 +103,6 @@ body{
     display: flex;
     height: 600px;
     width: 100%;
-    background-color: #2F303A;
 }
 .intro h1{
     display: flex;
@@ -132,6 +136,7 @@ body{
 .about_us{
     display: flex;
     width: 100%;
+    background-color: #fff;
 }
 .about_us .container{
     flex-direction: column;
