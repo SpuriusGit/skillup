@@ -1,4 +1,5 @@
 let burger = document.querySelector('.burger'),
+    header = document.querySelector('.header'),
     list = document.querySelector('.burger_list'),
     logo = document.querySelector('.logo'),
     about_us = document.querySelector('.about_us'),
