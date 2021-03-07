@@ -1,3 +1,4 @@
+// куча переменных
 let burger = document.querySelector('.burger'),
     header = document.querySelector('.header'),
     list = document.querySelector('.burger_list'),
@@ -11,7 +12,7 @@ let burger = document.querySelector('.burger'),
     scroll3 = document.querySelector('.scroll3'),
     scroll4 = document.querySelector('.scroll4'),
     check = false;
-
+// Чтобы выпадал бургер-лист
 burger.addEventListener('click',()=>{
     if(check == false){
         list.style.display = 'block';
@@ -21,6 +22,7 @@ burger.addEventListener('click',()=>{
         check = false;
     }
 });
+// Все события с скроллами
 logo.addEventListener('click',function(){
     window.scrollTo({
         top: 0,
